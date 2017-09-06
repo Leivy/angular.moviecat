@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>电影展示</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
+</head>
+
+<body ng-app="movieCat">
+  <!-- 顶部导航栏开始 -->
+  <div class="top">
+    <div class="header" ng-controller="SearchController">
+      <a href="#!/home_page"><img src="assets/img/logo.png" alt=""></a>
+      <div class="search">
+        <input class="my-input" type="text" placeholder="电影搜索" ng-model="searchTxt">
+        <button ng-click="search()">搜索</button>
+      </div>
+    </div>
+    <nav class="nav" menu-active>
+
+    </nav>
+  </div>
+  <!-- 顶部导航栏结束 -->
+
+
+  <div class="container" ng-view>
+    <!--其他-->
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <p>版权所有&copy; 小透明angular实战(允许侵权)</p>
+    </div>
+  </footer>
+
+
+
+  <script src="./assets/js/prefixfree.min.js"></script>
+  <script src="./node_modules/angular/angular.js"></script>
+  <script src="./node_modules/angular-route/angular-route.js"></script>
+  <!-- 引入home模块的js文件 -->
+  <script src="./home/home.js"></script>
+  <!-- 引入热映模块的js文件 -->
+  <!-- <script src="./in_theaters/in_theaters.js"></script> -->
+  <!-- 引入jsonp服务 -->
+  <script src="/common/jsonpservice.js"></script>
+  <!-- 引入movieCat.comingSoon模块文件 -->
+  <!-- <script src="./coming_soon/coming_soon.js"></script> -->
+  <script src="./movie_list/movie_list.js"></script>
+  <!-- 引入自定义指令文件 -->
+  <script src="./common/directives/menuactive.js"></script>
+  <!-- 引入详情页文件 -->
+  <script src="./detail/detail.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
